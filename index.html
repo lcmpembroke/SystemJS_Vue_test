@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Module Features</title>
+
+    <script type="systemjs-importmap">
+    {
+        "imports" : {
+            "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.12"
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <div id="container">
+        The planet was formed {{ age }} ago.
+    </div>
+
+    <script type="module" src="./entry.js"></script>
+    <!--ALTERNATIVE TO LINE below <script>System.import("./entry.js")</script>-->
+    <!--<script type="systemjs-module" src="./entry.js"></script>-->
+    <!--<script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system-node.cjs" integrity="sha512-dGQpe9Hb1dXjYT7TSrTS6qnRmzrhY9wsyRtN6BR2R+XgiXf5cpgvWVGPWptrarkfoldzpIkl7adWEddhoKsX6A==" crossorigin="anonymous"></script>-->
+    <script src="/node_modules/systemjs/dist/system.js"></script>
+    <script>System.import("./entry.js")</script>
+
+</body>
+</html>
